@@ -1,0 +1,39 @@
+.stats {
+    background-color: #cad2c5;
+    padding: 4rem 2rem;
+    color: #2f3e46;
+}
+
+.stats h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2f3e46;
+}
+
+.statItem {
+    margin-bottom: 2rem;
+}
+
+.statItem h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #354f52;
+    transition: transform 0.3s ease;
+}
+
+.statItem h3:hover {
+    transform: scale(1.1);
+    color: #52796f;
+}
+
+.statItem p {
+    font-size: 1rem;
+    color: #2f3e46;
+}
+
+.sources {
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #354f52;
+    text-align: center;
+}
