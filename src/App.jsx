@@ -12,10 +12,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path="*" element={<NotFound />} />
         </Route>
-        
+
         <Route path="/admin" element={<AdminPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
 
