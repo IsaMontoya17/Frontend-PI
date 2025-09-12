@@ -1,0 +1,514 @@
+:root {
+    --color-light: #CAD2C5;
+    --color-medium: #84A98C;
+    --color-dark: #52796F;
+    --color-darker: #354F52;
+    --color-darkest: #2F3E46;
+    --color-accent: #87CEEB;
+    --white: #ffffff;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+    --shadow-heavy: rgba(0, 0, 0, 0.25);
+}
+
+.mapPage {
+    min-height: 100vh;
+    background: #F2F4FF;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+}
+
+.mapHeader {
+    background: var(--white);
+    box-shadow: 0 4px 20px var(--shadow-light);
+    position: relative;
+    z-index: 10;
+}
+
+.headerContent {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 32px 24px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+}
+
+.titleSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.pageTitle {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-darkest);
+    margin: 0 0 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.titleIcon {
+    font-size: 2.2rem;
+    background: linear-gradient(135deg, var(--color-medium), var(--color-dark));
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(132, 169, 140, 0.3);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.pageSubtitle {
+    font-size: 1.1rem;
+    color: var(--color-darker);
+    margin: 0;
+    opacity: 0.9;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.filterSection {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.filterTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-darker);
+    margin: 0;
+}
+
+.filterButtons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.filterBtn {
+    background: var(--white);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    min-width: 90px;
+    box-shadow: 0 4px 15px var(--shadow-light);
+}
+
+.filterBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px var(--shadow-medium);
+}
+
+.filterBtn.active {
+    background: var(--filter-color, var(--color-medium));
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(132, 169, 140, 0.4);
+}
+
+.filterLabel {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.filterCount {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 2px 8px;
+    border-radius: 20px;
+    min-width: 20px;
+    text-align: center;
+}
+
+.filterBtn.active .filterCount {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.mapContainer {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    height: calc(100vh - 180px);
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px 24px;
+    gap: 24px;
+}
+
+.mapWrapper {
+    position: relative;
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px var(--shadow-medium);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.mapLoader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-align: center;
+}
+
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid var(--white);
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+    margin-bottom: 20px;
+}
+
+.loadingText {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+.loadingSubtext {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin: 0;
+}
+
+.sidePanel {
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px var(--shadow-medium);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.panelHeader {
+    padding: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.panelTitle {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-darkest);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.locationCount {
+    background: var(--white);
+    color: var(--color-dark);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.locationsList {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.locationCard {
+    background: var(--white);
+    border: 2px solid transparent;
+    border-radius: 16px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px var(--shadow-light);
+    display: flex;
+    gap: 16px;
+}
+
+.locationCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px var(--shadow-medium);
+    border-color: var(--color-medium);
+}
+
+.locationCard.selected {
+    border-color: var(--color-dark);
+    background: rgba(132, 169, 140, 0.05);
+    box-shadow: 0 8px 25px rgba(132, 169, 140, 0.2);
+}
+
+.locationImage {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.locationImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.locationBadge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    border: 2px solid var(--white);
+    box-shadow: 0 2px 8px var(--shadow-light);
+}
+
+.locationBadge.store {
+    background: var(--color-dark);
+}
+
+.locationBadge.donation {
+    background: var(--color-light);
+}
+
+.locationBadge.event {
+    background: var(--color-accent);
+}
+
+.locationInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.locationName {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-darkest);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.locationCategory {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-medium);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.locationAddress {
+    font-size: 0.85rem;
+    color: var(--color-darker);
+    margin: 0;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+.locationHours {
+    font-size: 0.8rem;
+    color: var(--color-dark);
+    margin: 0;
+    line-height: 1.4;
+    opacity: 0.8;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 8px 25px rgba(132, 169, 140, 0.3);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 12px 35px rgba(132, 169, 140, 0.5);
+    }
+}
+
+.locationsList::-webkit-scrollbar {
+    width: 6px;
+}
+
+.locationsList::-webkit-scrollbar-track {
+    background: rgba(202, 210, 197, 0.2);
+    border-radius: 10px;
+}
+
+.locationsList::-webkit-scrollbar-thumb {
+    background: var(--color-medium);
+    border-radius: 10px;
+}
+
+.locationsList::-webkit-scrollbar-thumb:hover {
+    background: var(--color-dark);
+}
+
+.filterBtn:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+.locationCard:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+@media (max-width: 1200px) {
+    .mapContainer {
+        grid-template-columns: 1fr 340px;
+    }
+
+    .headerContent {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .pageTitle {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .mapContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        height: auto;
+        min-height: calc(100vh - 180px);
+    }
+
+    .mapWrapper {
+        min-height: 500px;
+    }
+
+    .sidePanel {
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .headerContent {
+        padding: 24px 16px;
+    }
+
+    .mapContainer {
+        padding: 0 16px 16px;
+        gap: 16px;
+    }
+
+    .pageTitle {
+        font-size: 1.8rem;
+    }
+
+    .titleIcon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+    }
+
+    .filterButtons {
+        gap: 8px;
+    }
+
+    .filterBtn {
+        min-width: 80px;
+        padding: 10px 16px;
+    }
+
+    .locationCard {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .locationImage {
+        width: 100%;
+        height: 120px;
+        max-width: none;
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .pageTitle {
+        font-size: 1.5rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .pageSubtitle {
+        font-size: 1rem;
+    }
+
+    .filterButtons {
+        justify-content: center;
+    }
+
+    .mapWrapper {
+        min-height: 400px;
+    }
+
+    .sidePanel {
+        max-height: 350px;
+    }
+
+    .panelHeader {
+        padding: 16px;
+    }
+
+    .locationsList {
+        padding: 12px;
+        gap: 12px;
+    }
+}
+
+@media (hover: none) {
+    .filterBtn:hover {
+        transform: none;
+        box-shadow: 0 4px 15px var(--shadow-light);
+    }
+
+    .locationCard:hover {
+        transform: none;
+        box-shadow: 0 4px 15px var(--shadow-light);
+    }
+}
