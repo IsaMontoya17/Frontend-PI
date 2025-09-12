@@ -31,9 +31,9 @@ const Header = () => {
 
                     </Nav>
                     <div className="d-flex gap-2">
-                        <Button as={Link} to="/login" variant="light">
+                        <Button as={Link} to="/signup" variant="light">
                             <FaUser className="me-2" />
-                            Cuenta / Registrarse
+                            Acceder / Registrarse
                         </Button>
                         <Button as={Link} to="/ajustes" variant="outline-light">
                             <FaCog className="me-2" />
