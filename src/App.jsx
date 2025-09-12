@@ -6,6 +6,7 @@ import Layout from './components/layout/Layout';
 import AdminPage from './pages/admin/adminPage/AdminPage';
 import Login from './pages/login/Login';
 import SignUp from './pages/signUp/SignUp';
+import Directory from './pages/user/directory/Directory';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/directorio" element={<Directory />} />
         </Route>
 
         <Route path="/admin" element={<AdminPage />} />

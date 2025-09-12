@@ -31,7 +31,7 @@ function HomePage() {
                 <span className={styles.heroTitleAccent}> EcoCloset</span>
               </h1>
               <p className={styles.heroSubtitle}>
-                El directorio sostenible que conecta a la comunidad con tiendas de segunda mano, 
+                El directorio sostenible que conecta a la comunidad con tiendas de segunda mano,
                 organizaciones de donación y ferias de moda responsable.
               </p>
               <div className={styles.heroButtons}>
@@ -137,10 +137,10 @@ function HomePage() {
                 a un futuro más verde para nuestra ciudad.
               </p>
               <div className={styles.ctaButtons}>
-                <Button className={styles.ctaPrimaryBtn}>
+                <Button as={Link} to="/signup" className={styles.ctaPrimaryBtn}>
                   💚 Comenzar Ahora
                 </Button>
-                <Button className={styles.ctaSecondaryBtn}>
+                <Button as={Link} to="/directorio" className={styles.ctaSecondaryBtn}>
                   Conocer Más
                 </Button>
               </div>
