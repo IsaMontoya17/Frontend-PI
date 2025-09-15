@@ -9,6 +9,7 @@ import SignUp from './pages/signUp/SignUp';
 import Directory from './pages/user/directory/Directory';
 import Map from './pages/user/map/Map';
 import Forum from './pages/user/forum/Forum';
+import Calendar from './pages/user/calendar/Calendar';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/directorio" element={<Directory />} />
           <Route path="/mapa" element={<Map />} />
+          <Route path="/calendario" element={<Calendar />} />
           <Route path="/foro" element={<Forum />} />
         </Route>
 
