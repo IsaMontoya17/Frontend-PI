@@ -39,54 +39,6 @@ const HeaderAdmin = () => {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" className="bg-light" />
                 <Navbar.Collapse id="navbarScroll">
-                    <Nav className="me-auto my-2 my-lg-0">
-
-                        <NavDropdown 
-                            title={<span className={styles.navDropdownToggle}>Gestión Tiendas</span>} 
-                            id="dropdown-tiendas"
-                            className={styles.navDropdown}
-                        >
-                            <NavDropdown.Item as={Link} to="/admin/tiendas">Ver Tiendas</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/admin/tiendas/crear">Crear Tienda</NavDropdown.Item>
-                        </NavDropdown>
-
-                        <NavDropdown 
-                            title={<span className={styles.navDropdownToggle}>Gestión Organizaciones</span>} 
-                            id="dropdown-organizaciones"
-                            className={styles.navDropdown}
-                        >
-                            <NavDropdown.Item as={Link} to="/admin/organizaciones">Ver Organizaciones</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/admin/organizaciones/crear">Crear Organización</NavDropdown.Item>
-                        </NavDropdown>
-
-                        <NavDropdown 
-                            title={<span className={styles.navDropdownToggle}>Gestión Eventos</span>} 
-                            id="dropdown-eventos"
-                            className={styles.navDropdown}
-                        >
-                            <NavDropdown.Item as={Link} to="/admin/eventos">Ver Eventos</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/admin/eventos/crear">Crear Evento</NavDropdown.Item>
-                        </NavDropdown>
-
-                        <NavDropdown 
-                            title={<span className={styles.navDropdownToggle}>Gestión Banners</span>} 
-                            id="dropdown-banners"
-                            className={styles.navDropdown}
-                        >
-                            <NavDropdown.Item as={Link} to="/admin/banners">Ver Banners</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/admin/banners/crear">Crear Banner</NavDropdown.Item>
-                        </NavDropdown>
-
-                        <NavDropdown 
-                            title={<span className={styles.navDropdownToggle}>Gestión Usuarios</span>} 
-                            id="dropdown-eventos"
-                            className={styles.navDropdown}
-                        >
-                            <NavDropdown.Item as={Link} to="/admin/eventos">Ver Usuarios</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/admin/eventos/crear">Crear usuario</NavDropdown.Item>
-                        </NavDropdown>
-                    </Nav>
-
                     <div className="d-flex gap-2 ms-auto">
                         <Button variant="outline-light" onClick={handleLogout}>
                             <FaSignOutAlt className="me-2" />
