@@ -8,23 +8,3 @@
 .navLink:hover {
     color: #CAD2C5 !important;
 }
-
-.navDropdownToggle {
-    color: white !important;
-    text-decoration: none !important;
-    transition: color 0.3s ease;
-}
-
-.navDropdownToggle:hover {
-    color: #CAD2C5 !important;
-}
-
-.navDropdown :global(.dropdown-toggle::after) {
-    color: white !important;
-    border-top-color: white !important;
-}
-
-.navDropdown:hover :global(.dropdown-toggle::after) {
-    color: #CAD2C5 !important;
-    border-top-color: #CAD2C5 !important;
-}
