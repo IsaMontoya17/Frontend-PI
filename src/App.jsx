@@ -8,6 +8,7 @@ import Login from './pages/login/Login';
 import SignUp from './pages/signUp/SignUp';
 import Directory from './pages/user/directory/Directory';
 import Map from './pages/user/map/Map';
+import Forum from './pages/user/forum/Forum';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/directorio" element={<Directory />} />
           <Route path="/mapa" element={<Map />} />
+          <Route path="/foro" element={<Forum />} />
         </Route>
 
         <Route path="/admin" element={<AdminPage />} />
