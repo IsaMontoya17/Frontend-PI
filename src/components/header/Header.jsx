@@ -26,7 +26,7 @@ const Header = () => {
                         <Nav.Link as={Link} to="/" className={styles.navLink}>Inicio</Nav.Link>
                         <Nav.Link as={Link} to="/directorio" className={styles.navLink}>Directorio</Nav.Link>
                         <Nav.Link as={Link} to="/mapa" className={styles.navLink}>Mapa</Nav.Link>
-                        <Nav.Link as={Link} to="/eventos" className={styles.navLink}>Eventos</Nav.Link>
+                        <Nav.Link as={Link} to="/calendario" className={styles.navLink}>Calendario</Nav.Link>
                         <Nav.Link as={Link} to="/foro" className={styles.navLink}>Foro</Nav.Link>
 
                     </Nav>
